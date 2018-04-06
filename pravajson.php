@@ -2,6 +2,7 @@
  /*
    Plugin Name: Flow Promotion Request
    */
+   include 'settings.php';
    
 function FlowGenerateForm(){
 	
@@ -28,6 +29,14 @@ function parsePOST($post){
 
 		echo $myJSON;
 	}
+	
+	function getAddressFromTextarea($txtarea){
+		
+		$arr = explode("\n",$txtarea);
+		return $arr;
+		
+		
+	}
 
 	function sendJSONMail($JSON){
 		// Mail aanvraag
@@ -46,12 +55,17 @@ function parsePOST($post){
 
 
 		$email = new PHPMailer();
-		$email->From      = 'info@svflow.nl';
-		$email->FromName  = 'Promotieaanvraag Distributer';
-		$email->Subject   = 'Promotieaanvraag'; //van maken Promotion Request [naam activiteit] [commissaris]
-		$email->Body      = $bodytext;
-		$email->AddAddress( 'vicevoorzitter@svflow.nl', 'meerminman' );
-		$email->AddCC( 'website@svflow.nl', 'mosseljongeee' );
+		$email->From      = get_option('from');
+		$email->FromName  = get_option('fromTit');
+		$email->Subject   = get_option('subject'); //van maken Promotion Request [naam activiteit] [commissaris]
+		$email->Body      = get_option('body');
+		foreach(getAddressFromTextarea(get_option('to')) as $toMail){
+			$email->AddCC( $toMail );
+		}
+		
+		
+		//$email->AddAddress( 'vicevoorzitter@svflow.nl', 'meerminman' );
+		//$email->AddCC( 'website@svflow.nl', 'mosseljongeee' );
 
 		$email->AddStringAttachment( $file_to_attach , 'aanvraag.json');
 		print($email->Send());
