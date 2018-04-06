@@ -1,0 +1,5 @@
+settings:
+
+Bodytekst naar commissaris
+ics activated?
+naar welke email? Kiezen uit users?
