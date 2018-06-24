@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Promotieaanvraag</title>
+<link href="requestForm.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="requestForm.js"></script>
+
+</head>
+
+<body>
+<form action="https://www.svflow.nl/wp-admin/admin-post.php" method="post">
+  <table width="200" border="0">
+    <tbody>
+      <tr>
+        <td><table width="300" border="1" id="basisInfo" name="basisInfo">
+			<caption>
+            Basis Informatie
+            </caption>
+          <tbody>
+            <tr>
+              <td><label for="naamActiviteit">Naam Activiteit:</label></td>
+              <td><input name="naamActiviteit" type="text" placeholder="Voer de naam van de activiteit in:"></td>
+            </tr>
+            <tr>
+              <td><label for="commissie">Organiserende Commissie:</label></td>
+              <td><select name="commissie">
+                <option>Acquisitiecommissie</option>
+                <option>Familliedagcommissie</option>
+                <option>Formele Activiteitencommissie</option>
+                <option>inFlowcommissie</option>
+                <option>Informele Activiteitencommissie</option>
+                <option>Introductiecommissie</option>
+                <option>Lustrumcommissie</option>
+                <option>Premaster- en Mastercommissie</option>
+                <option>Promocommissie</option>
+                <option>Studiereiscommissie</option>
+                <option>Symposiumcommissie</option>
+                <option>Webcommissie</option>
+                <option>Weekendcommissie</option>
+                <option>Bestuur</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td><label for="emailCommissioner">Email commissaris:</label></td>
+              <td><input name="emailCommissioner" type="email" id="emailCommissioner"></td>
+            </tr>
+            <tr>
+              <td><label for="startPromotion">Start Promo:</label></td>
+              <td><input type="startPromotion" name="startPromotion" id="startPromotion"></td>
+            </tr>
+            <tr>
+              <td><label for="location">Locatie:</label></td>
+              <td><input type="text" name="location" id="location"></td>
+            </tr>
+            <tr>
+              <td><label for="startEvent">Start Evenement:</label></td>
+              <td><input type="datetime" name="startEvent" id="startEvent"></td>
+            </tr>
+            <tr>
+              <td><label for="endEvent">Einde Evenement:</label></td>
+              <td><input type="datetime" name="endEvent" id="endEvent"></td>
+            </tr>
+            <tr>
+              <td><label>Waar wil je Promoten?</label></td>
+              <td><p>
+                <label>
+                  <input name="promoPlatforms" type="checkbox" class="segChecks" id="promoPlatforms_0" onClick="showFormSegment()" value="website">
+                  Website</label>
+                <br>
+                <label>
+                  <input name="promoPlatforms" type="checkbox" class="segChecks" id="promoPlatforms_1" value="fbpost" onClick="showFormSegment()">
+                  FB Post</label>
+                <br>
+                <label>
+                  <input name="promoPlatforms" type="checkbox" class="segChecks" id="promoPlatforms_2" value="fbevent" onClick="showFormSegment()">
+                  FB Event</label>
+                <br>
+                <label>
+                  <input name="promoPlatforms" type="checkbox" class="segChecks" id="promoPlatforms_3" value="twitter" onClick="showFormSegment()">
+                  Twitter</label>
+                <br>
+                <label>
+                  <input name="promoPlatforms" type="checkbox" class="segChecks" id="promoPlatforms_4" value="insta" onClick="showFormSegment()">
+                  Instagram</label>
+                <br>
+                <label>
+                  <input name="promoPlatforms" type="checkbox" class="segChecks" id="promoPlatforms_5" value="linkedin" onClick="showFormSegment()">
+                  LinkedIn</label>
+                <br>
+                <label>
+                  <input name="promoPlatforms" type="checkbox" class="segChecks" id="promoPlatforms_6" value="snap" onClick="showFormSegment()">
+                  Snapchat</label>
+                <br>
+                <label>
+                  <input name="promoPlatforms" type="checkbox" class="segChecks" id="promoPlatforms_7" value="app" onClick="showFormSegment()">
+                  App notification</label>
+                <br>
+              </p></td>
+            </tr>
+          </tbody>
+        </table></td>
+      </tr>
+      <tr>
+        <td>
+			<table width="300" border="1" class="seg" name="website">
+			<caption>
+            Website Post
+            </caption>
+          <tbody>
+            <tr>
+              <td>&nbsp;</td>
+              <td><label>EN</label>                &nbsp;</td>
+              <td><label>NL</label>  &nbsp;</td>
+            </tr>
+            <tr>
+              <td><label for="webtitleEN">Titel:</label></td>
+              <td><input type="text" name="webtitleEN" id="Titel"></td>
+              <td><input type="text" name="webtitleNL" id="Titel"></td>
+            </tr>
+            <tr>
+              <td><label for="webtextEN">Text:</label></td>
+              <td><input name="webtextEN" type="text" id="webtextEN"></td>
+              <td><input name="webtextNL" type="text" id="webtextNL"></td>
+            </tr>
+            <tr>
+              <td><label for="SummaryEN">Korte Samenvatting:</label></td>
+              <td><textarea name="SummaryEN" id="SummaryEN"></textarea></td>
+              <td><textarea name="SummaryNL" id="SummaryNL"></textarea></td>
+			  </tr>
+            <tr>
+              <td><label for="addForm">Formulier: </label></td>
+              <td><input name="addForm" type="checkbox" class="segChecks" id="addForm" value="form" onClick="showFormSegment()"></td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table></td>
+      </tr>
+      <tr>
+        <td><table width="300" border="1" class="seg" name="form">
+            <caption >
+              Formulier
+            </caption>
+            <tbody>
+              <tr>
+                <td>&nbsp;</td>
+                <td><label>EN</label>
+                  &nbsp;</td>
+                <td><label>NL</label>
+                  &nbsp;</td>
+              </tr>
+              <tr>
+                <td><label for="datepostweboffline">Datum online:</label></td>
+                <td><input type="date" name="datepostwebonline" id="datepostwebonline"></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><label for="datepostweboffline">Datum offline:</label></td>
+                <td><input type="date" name="datepostweboffline" id="datepostweboffline"></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><label>Wat moet er in het formulier komen?</label></td>
+                <td><p>
+                  <label>
+                    <input type="checkbox" name="formDefaultOptions" value="fname" id="formDefaultOptions_0">
+                    First Name</label>
+                  <br>
+                  <label>
+                    <input type="checkbox" name="formDefaultOptions" value="lname" id="formDefaultOptions_1">
+                    Last Name</label>
+                  <br>
+                  <label>
+                    <input type="checkbox" name="formDefaultOptions" value="email" id="formDefaultOptions_2">
+                    Email</label>
+                  <br>
+                  <label>
+                    <input type="checkbox" name="formDefaultOptions" value="telephone" id="formDefaultOptions_3">
+                    Telefoon</label>
+                  <br>
+                  <label>
+                    <input type="checkbox" name="formDefaultOptions" value="studyyear" id="formDefaultOptions_4">
+                    In welk jaar zit je: (denk aan: bachelor 123, premaster of master)</label>
+                  <br>
+                  <label>
+                    <input type="checkbox" name="formDefaultOptions" value="track" id="formDefaultOptions_5">
+                    Track</label>
+                  <br>
+                  <label>
+                    <input type="checkbox" name="formDefaultOptions" value="age" id="formDefaultOptions_6">
+                    Leeftijd</label>
+                  <br>
+                </p></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><label for="nondefaultOptionsFormEN">Andere opties voor in het Formulier:</label></td>
+                <td><textarea name="nondefaultOptionsFormEN" id="nondefaultOptionsFormEN"></textarea></td>
+                <td><textarea name="nondefaultOptionsFormNL" id="nondefaultOptionsFormNL"></textarea></td>
+              </tr>
+			<tr>
+                <td><label for="confirmationEN">Bevstigingsmailtje:</label></td>
+                <td><textarea name="confirmationEN" id="confirmationEN"></textarea></td>
+                <td><textarea name="confirmationNL" id="confirmationNL"></textarea></td>
+              </tr>
+            </tbody>
+        </table></td>
+      </tr>
+      <tr>
+        <td><table width="300" border="1" class="seg" name="fbpost">
+			<caption>
+Facebook Post
+            </caption>
+          <tbody>
+            <tr>
+              <td>&nbsp;</td>
+              <td><label>EN</label>                &nbsp;</td>
+              <td><label>NL</label>  &nbsp;</td>
+            </tr>
+            <tr>
+              <td><label for="FBPtextEN">Text:</label></td>
+              <td><input name="FBPtextEN" type="text" id="FBPtextEN"></td>
+              <td><input name="FBPtextNL" type="text" id="FBPtextNL"></td>
+            </tr>
+          </tbody>
+        </table></td>
+      </tr>
+      <tr>
+        <td>
+			<table width="300" border="1" class="seg" name="fbevent">
+			<caption>
+            Facebook Event
+            </caption>
+          <tbody>
+            <tr>
+              <td>&nbsp;</td>
+              <td><label>EN</label>                &nbsp;</td>
+              <td><label>NL</label>  &nbsp;</td>
+            </tr>
+            <tr>
+              <td><label for="FBEtitleEN">Titel:</label></td>
+              <td><input type="text" name="FBEtitleEN"></td>
+              <td><input type="text" name="FBEtitleNL"></td>
+            </tr>
+            <tr>
+              <td><label for="FBEtextEN">Text:</label></td>
+              <td><input name="FBEtextEN" type="text" id="FBEtextEN"></td>
+              <td><input name="FBEtextNL" type="text" id="FBEtextNL"></td>
+            </tr>
+          </tbody>
+        </table></td>
+      </tr>
+      <tr>
+        <td><table width="300" border="1" class="seg" name="twitter">
+			<caption>
+Tweet
+            </caption>
+          <tbody>
+            <tr>
+              <td>&nbsp;</td>
+              <td><label>EN</label>                &nbsp;</td>
+              <td><label>NL</label>  &nbsp;</td>
+            </tr>
+            <tr>
+              <td><label for="TweettextEN">Text:</label></td>
+              <td><input name="TweettextEN" type="text" id="TweettextEN"></td>
+              <td><input name="TweettextNL" type="text" id="TweettextNL"></td>×
+            </tr>
+          </tbody>
+        </table></td>
+      </tr>
+		<tr>
+        <td><table width="300" border="1" class="seg" name="linkedin">
+			<caption>
+LinkedIn Post
+            </caption>
+          <tbody>
+            <tr>
+              <td>&nbsp;</td>
+              <td><label>EN</label>                &nbsp;</td>
+              <td><label>NL</label>  &nbsp;</td>
+            </tr>
+            <tr>
+              <td><label for="LItextEN">Text:</label></td>
+              <td><input name="LItextEN" type="text" id="LItextEN"></td>
+              <td><input name="LItextNL" type="text" id="LItextNL"></td>
+            </tr>
+          </tbody>
+        </table></td>
+      </tr>
+	<tr>
+        <td><table width="300" border="1" class="seg" name="insta">
+			<caption>
+Instagram Post
+            </caption>
+          <tbody>
+            <tr>
+              <td>&nbsp;</td>
+              <td><label>EN</label>                &nbsp;</td>
+              <td><label>NL</label>  &nbsp;</td>
+            </tr>
+            <tr>
+              <td><label for="IGtextEN">Text:</label></td>
+              <td><input name="IGtextEN" type="text" id="IGtextEN"></td>
+              <td><input name="IGtextNL" type="text" id="IGtextNL"></td>
+            </tr>
+			  <tr>
+              <td><label>Plaatje:</label></td>
+              <td><label>To Be Implemented</label></td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table></td>
+      </tr>
+	<tr>
+	  <td><table width="300" border="1">
+	    <caption>
+	      Opmerkingen
+	      </caption>
+	    <tbody>
+	      <tr>
+	        <td>
+              <textarea name="comments" id="comments">Voer eventuele opmerkingen hier in...</textarea></td>
+	        </tr>
+	      <tr>
+	        <td><input type="submit" name="submit" id="submit" value="Verzenden"></td>
+	        </tr>
+	      </tbody>
+	    </table></td>
+	  </tr>
+    </tbody>
+  </table>
+  <input name="fromPage" type="hidden" value="1">
+  <input name="action" type="hidden" value="FlowPromotieaanvraag">
+</form>
+</body>
+</html>

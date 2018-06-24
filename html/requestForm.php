@@ -34,7 +34,7 @@
 <div class="col-md-4 inputGroupContainer">
 <div class="input-group">
 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-<input name="m_startpromo" placeholder="startpromo" class="form-control" type="datetime-local">
+<input name="m_startpromo" placeholder="startpromo" class="form-control" type="startPromotiontime-local">
 </div>
 </div>
 </div>
@@ -116,7 +116,7 @@
 <div class="col-md-4 inputGroupContainer">
 <div class="input-group">
 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-<input name="first_name" placeholder="First Name" class="form-control" type="datetime-local">
+<input name="first_name" placeholder="First Name" class="form-control" type="startPromotiontime-local">
 </div>
 </div>
 </div>
@@ -126,7 +126,7 @@
 <div class="col-md-4 inputGroupContainer">
 <div class="input-group">
 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-<input name="first_name" placeholder="First Name" class="form-control" type="datetime-local">
+<input name="first_name" placeholder="First Name" class="form-control" type="startPromotiontime-local">
 </div>
 </div>
 </div>
@@ -192,7 +192,7 @@ countfield.value = maxlimit - field.value.length;
 <div class="col-md-4 inputGroupContainer">
 <div class="input-group">
 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-<input name="first_name" placeholder="First Name" class="form-control" type="datetime-local">
+<input name="first_name" placeholder="First Name" class="form-control" type="startPromotiontime-local">
 </div>
 </div>
 </div>
@@ -202,7 +202,7 @@ countfield.value = maxlimit - field.value.length;
 <div class="col-md-4 inputGroupContainer">
 <div class="input-group">
 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-<input name="first_name" placeholder="First Name" class="form-control" type="datetime-local">
+<input name="first_name" placeholder="First Name" class="form-control" type="startPromotiontime-local">
 </div>
 </div>
 </div>

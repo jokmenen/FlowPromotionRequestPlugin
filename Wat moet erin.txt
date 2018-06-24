@@ -1,0 +1,33 @@
+Naam activiteit
+Naam Commissie
+Start Promotie
+
+Waar wil je promoten? (Website, FB Post, FB Event, Twitter, Insta, LinkedIn, Snapchat, app?)
+
+Website:
+	Titel [EN/NL]
+	Tekst [NL/EN]
+	Samenvatting [NL/EN]
+	Bannerwensen
+	(Upload knop zodat mensen hun eigen bannersketches of afbeeldingen voor bij de tekst kunnen invoegen?)
+	Wanneer online?
+	Formulier?
+		Wanneer online en offline
+		Wat moet erin (evt standaardopties aangeven?) [NL/EN]
+		Bevestigingsmailtje [NL/EN]
+	
+FB Post:
+	Tekst [NL/EN](limit to 320 chars)
+	Bannerwensen (vul zelfde als site in wanneer van toepassing oid erbijzetten)
+	Wanneer online?
+
+FB Event:
+
+	Evenementstitel [EN]
+	Evenementstekst	[EN/NL]
+	Locatie
+	Tijd Event
+	Wanneer online
+	Evt Bannerwensen
+
+
