@@ -2,22 +2,17 @@
  /*
    Plugin Name: Flow Promotion Request
    */
+   
+   add_action("admin_post_FlowPromotieaanvraag",'FlowPromotionRequest');
    include 'settings.php';
    
-function FlowGenerateForm(){
-	
-	//$HTML = file_get_contents(plugins_url('/html/requestForm.php',__FILE__ ));
-    //echo $HTML;
-	
-}
-
-add_shortcode('FlowPromoGenerate',FlowGenerateForm);
-add_action("admin_post_FlowPromotieaanvraag",FlowPromotionRequest);
+   
+   
    
 function parsePOST($post){	
 		$format = "%s : %s ";
 
-		echo "Verzonden: <br>";
+		//echo "Verzonden: <br>";
 
 		foreach (array_keys($post) as $element){
 			
@@ -27,7 +22,8 @@ function parsePOST($post){
 
 		$myJSON = json_encode($myObj);
 
-		echo $myJSON;
+		//echo "JSON = " . $myJSON;
+		return $myJSON;
 	}
 	
 	function getAddressFromTextarea($txtarea){
@@ -40,8 +36,9 @@ function parsePOST($post){
 
 	function sendJSONMail($JSON){
 		// Mail aanvraag
+		if (!class_exists("phpmailer")) {
 		require_once('PHPMailer-master/class.phpmailer.php');
-
+		}
 		$file_to_attach = $JSON;
 
 
@@ -87,10 +84,9 @@ function FlowPromotionRequest(){
 	}
 	else {
 		
-		echo "ERROR, Please use the Promotion Request Form";
+		//echo "ERROR, Please use the Promotion Request Form";
 		return 1;
 	}
 
 	// You can contact Ramon Pieternella (jokmenen@gmail.com) for any questions about this promotion request system. Please add "Flow Promotion Request" as a subject. 
 }
-?>
